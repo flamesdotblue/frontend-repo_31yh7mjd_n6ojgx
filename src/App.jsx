@@ -3,10 +3,12 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import HighlightsSection from './components/HighlightsSection';
 import ContactMap from './components/ContactMap';
+import Team from './components/Team';
 
 const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
+  { label: 'Team', href: '#team' },
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'Contact', href: '#contact' },
@@ -53,6 +55,9 @@ function App() {
           </p>
         </section>
 
+        {/* Team */}
+        <Team />
+
         {/* Services Snapshot */}
         <Services />
 
@@ -73,6 +78,7 @@ function App() {
           <div>
             <h4 className="text-sm font-semibold text-white">Explore</h4>
             <ul className="mt-2 space-y-2 text-sm text-white/70">
+              <li><a href="#team" onClick={(e)=>onNavClick(e,'#team')} className="hover:text-white">Team</a></li>
               <li><a href="#services" onClick={(e)=>onNavClick(e,'#services')} className="hover:text-white">Services</a></li>
               <li><a href="#work" onClick={(e)=>onNavClick(e,'#work')} className="hover:text-white">Work</a></li>
               <li><a href="#about" onClick={(e)=>onNavClick(e,'#about')} className="hover:text-white">About</a></li>
